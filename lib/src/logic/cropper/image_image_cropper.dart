@@ -24,6 +24,9 @@ class ImageImageCropper extends ImageCropper<Image> {
     ImageFormat outputFormat = ImageFormat.jpeg,
     ImageShape shape = ImageShape.rectangle,
   }) {
+    topLeft = Offset(topLeft.dx.roundToDouble(), topLeft.dy.roundToDouble());
+    bottomRight = Offset(bottomRight.dx.roundToDouble(), bottomRight.dy.roundToDouble());
+
     if (topLeft.dx < 0 ||
         topLeft.dy < 0 ||
         bottomRight.dx < 0 ||
